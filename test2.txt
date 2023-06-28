@@ -1,0 +1,16 @@
+
+        This keyword is most often used to input files into upload forms.
+        The keyword does not check ``file_path`` is the file or folder
+        available on the machine where tests are executed. If the ``file_path``
+        points at a file and when using Selenium Grid, Selenium will
+        [https://seleniumhq.github.io/selenium/docs/api/py/webdriver_remote/selenium.webdriver.remote.command.html?highlight=upload#selenium.webdriver.remote.command.Command.UPLOAD_FILE|magically],
+        transfer the file from the machine where the tests are executed
+        to the Selenium Grid node where the browser is running.
+        Then Selenium will send the file path, from the nodes file
+        system, to the browser.
+
+        That ``file_path`` is not checked, is new in SeleniumLibrary 4.0.
+
+        Example:
+        | `Choose File` | my_upload_field | ${CURDIR}/trades.csv |
+        """
